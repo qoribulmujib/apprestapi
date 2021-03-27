@@ -17,4 +17,6 @@ module.exports = function(app){
         .put(jsonku.MengubahDataMahasiswaById);
     app.route('/hapus')
         .delete(jsonku.MenghapusMahasiswaById);
+    app.route('/tampildatamahasiswa')
+        .get(jsonku.MahasiswaMengambilMatakuliah);
 }

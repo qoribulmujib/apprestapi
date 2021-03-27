@@ -77,3 +77,16 @@ exports.MenghapusMahasiswaById = function(req, res){
         }
     });
 };
+
+//tampilin semua mahasiswa yang telah menggambil maakuliah
+exports.MahasiswaMengambilMatakuliah = function(req, res){
+    connection.query('SELECT mahasiswa.idMahasiswa, mahasiswa.nim, mahasiswa.nama, mahasiswa.jurusan, matakuliah.matakuliah, matakuliah.sks FROM krs JOIN mahasiswa JOIN matakuliah WHERE krs.idMahasiswa = mahasiswa.idMahasiswa AND krs.idMatakuliah = matakuliah.idMatakuliah ORDER BY mahasiswa.idMahasiswa', 
+        function(error, rows, fields){
+            if(error){
+                console.log(error);
+            }else{
+                response.oknested(rows, res);
+            }
+        }
+    )
+}
