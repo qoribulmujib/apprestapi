@@ -7,7 +7,7 @@ var config = require('../config/secret');
 var ip = require('ip');
 
 //buat controller untuk register
-module.exports = function(req, res){
+exports.registrasi = function(req, res){
     var post = {
         username: req.body.username,
         password: md5(req.body.password),
