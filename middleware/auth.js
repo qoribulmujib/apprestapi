@@ -89,3 +89,8 @@ exports.loggin = function(req, res){
         }
     });
 }
+
+//tes halaman role 2
+exports.halamanRahasia = function(req, res){
+    response.ok('ini halaman untuk role 2');
+}
