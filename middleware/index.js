@@ -10,6 +10,6 @@ router.post('/api/v1/register', auth.registrasi);
 router.post('/api/v1/login', auth.loggin);
 
 //alamt yang perlu otorization
-router.get('/api/v1/rahasia', verifikasi(2), auth.halamanRahasia);
+router.get('/api/v1/rahasia', verifikasi(), auth.halamanRahasia);
 
 module.exports = router;
